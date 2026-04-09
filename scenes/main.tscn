@@ -3,7 +3,7 @@
 [ext_resource type="Shader" uid="uid://dcc7il3iw2g1q" path="res://scripts/scroll_bkgd.gdshader" id="1_0wfyh"]
 [ext_resource type="Script" uid="uid://dycbc6ub7wr13" path="res://scenes/gamecontroller.gd" id="1_trceg"]
 [ext_resource type="Texture2D" uid="uid://cprgis7b7ji1w" path="res://sprites/pattern_32.png" id="3_jkv2x"]
-[ext_resource type="PackedScene" uid="uid://b7uigxtuvsmbw" path="res://levels/level_1.tscn" id="4_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://kiuph5lt10x" path="res://levels/sandbox.tscn" id="4_jkv2x"]
 [ext_resource type="LabelSettings" uid="uid://dlbdu8ymnma1v" path="res://scenes/main_label.tres" id="5_jbj1t"]
 [ext_resource type="Texture2D" uid="uid://d7rtuffr1du5" path="res://sprites/dpad.png" id="6_a8y0u"]
 [ext_resource type="Texture2D" uid="uid://ca662gjaw2eju" path="res://sprites/dpad_up.png" id="7_jkv2x"]
@@ -18,11 +18,11 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jyhfs"]
 shader = ExtResource("1_0wfyh")
-shader_parameter/scroll_speed = 0.030000001425
+shader_parameter/scroll_speed = 0.03
 shader_parameter/angle_degrees = 45.0
 shader_parameter/repeat_x = 10.0
 shader_parameter/repeat_y = 10.0
-shader_parameter/tint = Color(1, 1, 1, 0.19607843)
+shader_parameter/tint = Color(1, 1, 1, 0.196078)
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_yc10j"]
 frames = 5
@@ -58,7 +58,7 @@ offset_right = 160.0
 offset_bottom = 90.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.4509804, 0.84313726, 0.9019608, 1)
+color = Color(0.45098, 0.843137, 0.901961, 1)
 
 [node name="TextureRect" type="TextureRect" parent="Background"]
 material = SubResource("ShaderMaterial_jyhfs")
@@ -76,7 +76,7 @@ stretch_mode = 6
 
 [node name="Gameplay" type="Node2D" parent="."]
 
-[node name="Level1" parent="Gameplay" instance=ExtResource("4_jkv2x")]
+[node name="Sandbox" parent="Gameplay" instance=ExtResource("4_jkv2x")]
 
 [node name="UI" type="CanvasLayer" parent="."]
 
